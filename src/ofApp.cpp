@@ -8,6 +8,7 @@ void ofApp::setup(){
     int baud = 9600;
     serial.setup("/dev/ttyACM0", baud);
     json = "";
+    ofToggleFullscreen();
 
     // ground
     ground.set( PADDING + NBX * (SIZE + PADDING ) , PADDING + NBY * (SIZE + PADDING ) );
