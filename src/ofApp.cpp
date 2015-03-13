@@ -60,7 +60,6 @@ void ofApp::update(){
             std::cout << "parsingSuccessful: " << ofToString( parsingSuccessful ) << std::endl;
 
             if( parsingSuccessful ){
-                ofLog() << "btnA: " + ofToString( jsonEl[ "btnA" ] );
                 changeHeightmap();
             }
             json = "";
@@ -101,7 +100,7 @@ void ofApp::draw(){
     ofColor centerColor = ofColor(85, 78, 68);
     ofColor edgeColor(0, 0, 0);
     ofBackgroundGradient(centerColor, edgeColor, OF_GRADIENT_CIRCULAR);
-    //heightmap.draw(0,0);
+    heightmap.draw(0,0);
     ofEnableDepthTest();
 
 
@@ -113,7 +112,7 @@ void ofApp::draw(){
 
     ofPushMatrix();
     ofTranslate(-(PADDING + NBX * ( SIZE + PADDING ))/2, -(PADDING + NBY * ( SIZE + PADDING ))/2, -500);
-    // ofRotateX( 90 );
+    ofRotateX( 90 );
 
 	material.begin();
 
