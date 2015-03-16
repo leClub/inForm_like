@@ -3,6 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+
     //init Serial communication
     serial.listDevices();
     vector <ofSerialDeviceInfo> deviceList = serial.getDeviceList();
@@ -49,21 +50,22 @@ void ofApp::setup(){
 	// fullsceen
 	isFullScreen = false;
 	ofSetFullscreen(true);
+
+	// mouse
+	ofHideCursor();
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
+    ofHideCursor();
 
     if (isFullScreen == false) {
         // ofToggleFullscreen();
         isFullScreen = true;
         ofSetFullscreen(isFullScreen);
     }
-
-
-
-
 
 
 
@@ -118,6 +120,9 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+
+    ofHideCursor();
+
     ofDisableDepthTest();
     ofColor centerColor = ofColor(85, 78, 68);
     ofColor edgeColor(0, 0, 0);
