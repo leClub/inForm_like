@@ -44,4 +44,6 @@ class ofApp : public ofBaseApp{
         ofImage heightmap;
         float z[NBX][NBY];
         ofBoxPrimitive box[NBX][NBY];
+
+        bool isFullScreen;
 };

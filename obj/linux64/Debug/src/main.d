@@ -312,7 +312,8 @@ obj/linux64/Debug/src/main.o: src/main.cpp \
  ../../../libs/openFrameworks/3d/ofEasyCam.h src/ofApp.h \
  ../../../addons/ofxJSON/src/ofxJSON.h \
  ../../../addons/ofxJSON/libs/jsoncpp/include/json/json.h \
- ../../../addons/ofxJSON/src/ofxJSONElement.h src/pin.h
+ ../../../addons/ofxJSON/src/ofxJSONElement.h src/pin.h \
+ ../../../libs/openFrameworks/app/ofAppGlutWindow.h
 
 ../../../libs/openFrameworks/ofMain.h:
 
@@ -977,3 +978,5 @@ src/ofApp.h:
 ../../../addons/ofxJSON/src/ofxJSONElement.h:
 
 src/pin.h:
+
+../../../libs/openFrameworks/app/ofAppGlutWindow.h:

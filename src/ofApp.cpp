@@ -2,6 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+
     //init Serial communication
     serial.listDevices();
     vector <ofSerialDeviceInfo> deviceList = serial.getDeviceList();
@@ -44,10 +45,18 @@ void ofApp::setup(){
 	material.setShininess( 120 );
     // the light highlight of the material //
 	material.setSpecularColor(ofColor(255, 255, 255, 255));
+
+	// fullsceen
+	isFullScreen = false;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+
+    if (!isFullScreen) {
+        ofToggleFullscreen();
+        isFullScreen = true;
+    }
 
     if( serial.available() ){
         //cout << "\tavailable: " << ofToString( serial.available() ) << endl;
