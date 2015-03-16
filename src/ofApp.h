@@ -4,8 +4,8 @@
 #include "ofxJSON.h"
 #include "pin.h"
 
-#define NBX 10
-#define NBY 10
+#define NBX 100
+#define NBY 60
 #define SIZE 2
 #define PADDING 1
 
