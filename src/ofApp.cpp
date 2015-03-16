@@ -48,15 +48,24 @@ void ofApp::setup(){
 
 	// fullsceen
 	isFullScreen = false;
+	ofSetFullscreen(true);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
-    if (!isFullScreen) {
-        ofToggleFullscreen();
+
+    if (isFullScreen == false) {
+        // ofToggleFullscreen();
         isFullScreen = true;
+        ofSetFullscreen(isFullScreen);
     }
+
+
+
+
+
+
 
     if( serial.available() ){
         //cout << "\tavailable: " << ofToString( serial.available() ) << endl;
@@ -103,6 +112,8 @@ void ofApp::update(){
         sin(ofGetElapsedTimef()*1.5f) * ofGetWidth()*.5,
         cos(ofGetElapsedTimef()*.2) * ofGetWidth()
     );
+
+
 }
 
 //--------------------------------------------------------------
@@ -141,6 +152,7 @@ void ofApp::draw(){
     material.end();
     ofDisableLighting();
     cam.end();
+
 }
 
 //--------------------------------------------------------------
@@ -166,6 +178,7 @@ float ofApp::ease(float value, float target, float easingVal) {
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     changeHeightmap();
+    // ofToggleFullscreen();
 }
 
 //--------------------------------------------------------------
